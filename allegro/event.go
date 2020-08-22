@@ -151,6 +151,22 @@ func (queue *EventQueue) GetNextEvent(event *Event) (interface{}, error) {
 	return event.cast(), nil
 }
 
+// Pause or resume accepting new events into the event queue (to resume, pass
+// false for pause). Events already in the queue are unaffected.
+//
+// While a queue is paused, any events which would be entered into the queue
+// are simply ignored. This is an alternative to unregistering then
+// re-registering all event sources from the event queue, if you just need to
+// prevent events piling up in the queue for a while.
+func (queue *EventQueue) Pause(pause bool) {
+	C.al_pause_event_queue((*C.ALLEGRO_EVENT_QUEUE)(queue), C.bool(pause))
+}
+
+// Return true if the event queue is paused.
+func (queue *EventQueue) IsPaused() bool {
+	return bool(C.al_is_event_queue_paused((*C.ALLEGRO_EVENT_QUEUE)(queue)))
+}
+
 // Wait until the event queue specified is non-empty. If ret_event is not NULL,
 // the first event in the queue will be copied into ret_event and removed from
 // the queue. If ret_event is NULL the first event is left at the head of the

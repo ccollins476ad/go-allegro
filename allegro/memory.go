@@ -2,6 +2,9 @@ package allegro
 
 // #include <allegro5/allegro.h>
 /*
+void *_al_malloc(size_t numbytes) {
+	return al_malloc(numbytes);
+}
 void _al_free(void *data) {
 	al_free(data);
 }
@@ -10,6 +13,10 @@ import "C"
 import (
 	"unsafe"
 )
+
+func malloc(numbytes C.size_t) unsafe.Pointer {
+	return C._al_malloc(numbytes)
+}
 
 func free(data unsafe.Pointer) {
 	C._al_free(data)

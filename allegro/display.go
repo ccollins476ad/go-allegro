@@ -23,6 +23,7 @@ const (
 	FRAMELESS                              = C.ALLEGRO_FRAMELESS
 	NOFRAME                                = C.ALLEGRO_NOFRAME
 	GENERATE_EXPOSE_EVENTS                 = C.ALLEGRO_GENERATE_EXPOSE_EVENTS
+	PROGRAMMABLE_PIPELINE                  = C.ALLEGRO_PROGRAMMABLE_PIPELINE
 )
 
 type DisplayMode C.struct_ALLEGRO_DISPLAY_MODE
