@@ -11,8 +11,9 @@ int get_stride() {
 import "C"
 import (
 	"errors"
-	"github.com/dradtke/go-allegro/allegro"
 	"unsafe"
+
+	"github.com/dradtke/go-allegro/allegro"
 )
 
 func col(color allegro.Color) C.ALLEGRO_COLOR {
@@ -33,7 +34,7 @@ type Vertex struct {
 	inited bool
 }
 
-func (v Vertex) init() {
+func (v *Vertex) init() {
 	if v.inited {
 		return
 	}
