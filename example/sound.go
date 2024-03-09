@@ -4,9 +4,9 @@ package main
 
 import (
 	"fmt"
-	"github.com/dradtke/go-allegro/allegro"
-	"github.com/dradtke/go-allegro/allegro/acodec"
-	"github.com/dradtke/go-allegro/allegro/audio"
+	"github.com/ccollins476ad/go-allegro/allegro"
+	"github.com/ccollins476ad/go-allegro/allegro/acodec"
+	"github.com/ccollins476ad/go-allegro/allegro/audio"
 	"io"
 	"net/http"
 	"os"

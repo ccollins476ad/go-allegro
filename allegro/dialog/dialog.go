@@ -13,7 +13,7 @@ import "C"
 import (
 	"errors"
 	"fmt"
-	"github.com/dradtke/go-allegro/allegro"
+	"github.com/ccollins476ad/go-allegro/allegro"
 	//"runtime"
 	"strings"
 	"unsafe"

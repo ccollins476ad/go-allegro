@@ -3,7 +3,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/dradtke/go-allegro/allegro"
+	"github.com/ccollins476ad/go-allegro/allegro"
 	"math"
 	"os"
 )

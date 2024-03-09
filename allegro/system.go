@@ -12,7 +12,7 @@ A bare-bones program might look something like this:
     package main
 
     import (
-    	"github.com/dradtke/go-allegro/allegro"
+    	"github.com/ccollins476ad/go-allegro/allegro"
     )
 
     const FPS int = 60

@@ -8,7 +8,7 @@ import "C"
 import (
 	"bytes"
 	"errors"
-	"github.com/dradtke/go-allegro/allegro"
+	"github.com/ccollins476ad/go-allegro/allegro"
 	"unsafe"
 )
 

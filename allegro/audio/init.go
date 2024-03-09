@@ -5,7 +5,7 @@ package audio
 // #include "../util.c"
 import "C"
 import (
-	"github.com/dradtke/go-allegro/allegro"
+	"github.com/ccollins476ad/go-allegro/allegro"
 	"unsafe"
 )
 

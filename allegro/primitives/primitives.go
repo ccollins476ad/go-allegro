@@ -13,7 +13,7 @@ import (
 	"errors"
 	"unsafe"
 
-	"github.com/dradtke/go-allegro/allegro"
+	"github.com/ccollins476ad/go-allegro/allegro"
 )
 
 func col(color allegro.Color) C.ALLEGRO_COLOR {

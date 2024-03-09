@@ -8,8 +8,8 @@ import "C"
 import (
 	"errors"
 	"fmt"
-	"github.com/dradtke/go-allegro/allegro"
-	"github.com/dradtke/go-allegro/allegro/font"
+	"github.com/ccollins476ad/go-allegro/allegro"
+	"github.com/ccollins476ad/go-allegro/allegro/font"
 	"unsafe"
 )
 

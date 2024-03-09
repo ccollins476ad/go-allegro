@@ -25,7 +25,7 @@ with the allegro_main module and al_run_main().
 Note: this has not been fully tested as I do not have access
 to OS X, so please let me know if it doesn't work for you.
 
-For more information, go to https://github.com/dradtke/go-allegro/issues/3.
+For more information, go to https://github.com/ccollins476ad/go-allegro/issues/3.
 */
 func Run(f func()) {
 	_main = f
