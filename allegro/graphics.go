@@ -102,10 +102,12 @@ const (
 	ALPHA                       = C.ALLEGRO_ALPHA
 	INVERSE_ALPHA               = C.ALLEGRO_INVERSE_ALPHA
 	// These need at least Allegro 5.0.10
-	SRC_COLOR          = C.ALLEGRO_SRC_COLOR
-	DEST_COLOR         = C.ALLEGRO_DEST_COLOR
-	INVERSE_SRC_COLOR  = C.ALLEGRO_INVERSE_SRC_COLOR
-	INVERSE_DEST_COLOR = C.ALLEGRO_INVERSE_DEST_COLOR
+	SRC_COLOR           = C.ALLEGRO_SRC_COLOR
+	DEST_COLOR          = C.ALLEGRO_DEST_COLOR
+	INVERSE_SRC_COLOR   = C.ALLEGRO_INVERSE_SRC_COLOR
+	INVERSE_DEST_COLOR  = C.ALLEGRO_INVERSE_DEST_COLOR
+	CONST_COLOR         = C.ALLEGRO_CONST_COLOR
+	INVERSE_CONST_COLOR = C.ALLEGRO_INVERSE_CONST_COLOR
 )
 
 // Static Methods {{{
@@ -272,6 +274,14 @@ func SeparateBlender() (op BlendingOperation, src, dst BlendingValue, alpha_op B
 	var cop, csrc, cdst, calpha_op, calpha_src, calpha_dst C.int
 	C.al_get_separate_blender(&cop, &csrc, &cdst, &calpha_op, &calpha_src, &calpha_dst)
 	return BlendingOperation(cop), BlendingValue(csrc), BlendingValue(cdst), BlendingOperation(calpha_op), BlendingValue(calpha_src), BlendingValue(calpha_dst)
+}
+
+func BlendColor() Color {
+	return Color(C.al_get_blend_color())
+}
+
+func SetBlendColor(c Color) {
+	C.al_set_blend_color(C.ALLEGRO_COLOR(c))
 }
 
 // Return the display that is "current" for the calling thread, or NULL if
